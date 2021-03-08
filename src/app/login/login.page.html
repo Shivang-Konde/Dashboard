@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title >
+      <ion-button fill="clear" color="dark" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" size="large" routerLink="/home">
+        Shopping Dashboard
+      </ion-button>
+      <ion-button fill="clear" color="dark" routerLink="/men">
+        Men
+      </ion-button>
+      <ion-button fill="clear" color="dark" routerLink="/women">
+        Women
+      </ion-button>
+      <ion-button fill="clear" color="dark" routerLink="/home">
+        Accesories
+      </ion-button>
+      <ion-button fill="clear" color="dark" routerLink="/profile">
+        Profile
+      </ion-button>
+    </ion-title>
+    <ion-button slot="end" fill="clear" color="dark" routerLink="/cart" >
+      <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4"></ion-col>
+      <ion-col size="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-title style="text-align: center;" color="dark">
+              <b>Login With Shoppers Stop</b>
+            </ion-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label>E-mail :</ion-label>
+              <ion-input placeholder="Enter maiId" type="email" [(ngModel)]="postdata.email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Password :</ion-label>
+              <ion-input placeholder="Enter Password" type="password" [(ngModel)]="postdata.password"></ion-input>
+            </ion-item>
+            
+              <ion-button width="100%" (click)="modify()">
+                Login
+              </ion-button>
+            
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4"></ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+  <div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+		<div class="user_card">
+		<div class="d-flex justify-content-center">
+		<div class="brand_logo_container">
+		<img src="https://webdevtrick.com/wp-content/uploads/logo-fb.png" class="brand_logo" alt="Logo">
+		</div>
+		</div>
+		<div class="d-flex justify-content-center form_container">
+		<form>
+		<div class="input-group mb-3">
+		<div class="input-group-append">
+		<span class="input-group-text"><i class="fas fa-user"></i></span>
+		</div>
+		<input type="text" name="" class="form-control input_user" value="" placeholder="username or email">
+		</div>
+		<div class="input-group mb-2">
+		<div class="input-group-append">
+		<span class="input-group-text"><i class="fas fa-key"></i></span>
+		</div>
+		<input type="password" name="" class="form-control input_pass" value="" placeholder="password">
+		</div>
+		<div class="form-group">
+		<div class="custom-control custom-checkbox">
+		<input type="checkbox" class="custom-control-input" id="customControlInline">
+		<label class="custom-control-label" for="customControlInline">Remember Password</label>
+		</div>
+		</div>
+		</form>
+		</div>
+		<div class="d-flex justify-content-center mt-3 login_container">
+		<button type="button" name="button" class="btn login_btn">Login</button>
+		</div>
+		<div class="mt-4">
+		<div class="d-flex justify-content-center links">
+	Don't have an account? <a href="https://webdevtrick.com" class="ml-2">Sign Up</a>
+		</div>
+		<div class="d-flex justify-content-center links">
+		<a href="#">Forgot your password?</a>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div> -->
+</ion-content>

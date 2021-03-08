@@ -13,37 +13,37 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'Home',
+      url: 'home',
+      icon: 'home'
     },
     {
-      title: 'Outbox',
+      title: 'Man',
       url: '/folder/Outbox',
       icon: 'paper-plane'
     },
     {
-      title: 'Favorites',
+      title: 'Women',
       url: '/folder/Favorites',
       icon: 'heart'
     },
     {
-      title: 'Archived',
+      title: 'Accessories',
       url: '/folder/Archived',
       icon: 'archive'
     },
     {
-      title: 'Trash',
+      title: 'Profile',
       url: '/folder/Trash',
       icon: 'trash'
     },
     {
-      title: 'Spam',
+      title: 'LogOut',
       url: '/folder/Spam',
       icon: 'warning'
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  isDesk;
 
   constructor(
     private platform: Platform,
@@ -61,6 +61,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.isDesk= !this.platform.is('desktop');
     const path = window.location.pathname.split('folder/')[1];
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
